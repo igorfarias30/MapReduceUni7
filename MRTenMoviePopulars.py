@@ -12,6 +12,7 @@ class MRTenMoviePopulars(MRJob):
 
         # get the mean rating
         ratins, popula = [], []
+        
         rating = list(rating)
         for i in range(len(rating)):
             ratins.append(rating[i][0])
