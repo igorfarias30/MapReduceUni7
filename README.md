@@ -1,6 +1,6 @@
 # Map e Reduce
 
-Disciplina de Programação com Map e Reduce, ministrada pelo prof. Robério no curso de Pós em Ciência de Dados, na UNI7. Primeira [atividade](dataset\uni7-pod-map-reduce-exercise-01.pdf) da disciplina
+Disciplina de Programação com Map e Reduce, ministrada pelo prof. Robério no curso de Pós em Ciência de Dados, na UNI7. Primeira [atividade](dataset\uni7-pod-map-reduce-exercise-01.pdf) da disciplina.
 
 Requerimentos
 * `Python 3.6`
@@ -36,4 +36,4 @@ Para mais detalhes dos métodos do MRjob:
 
 Equipe:
 * Igor Farias
-* Pedro
+* Pedro Andrade
