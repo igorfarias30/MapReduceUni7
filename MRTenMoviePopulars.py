@@ -35,9 +35,7 @@ class MRTenMoviePopulars(MRJob):
 
         line = sorted(line, reverse = True)
         for i in range(10):
-            if i < 1:
-                yield "Ordem", ["Soma", "Movie_id"]
-
+            #    "Ordem", ["Soma", "Movie_id"]
             yield i + 1, (line[i][0], line[i][1])
 
     # defining reducer to sort by mean rating
