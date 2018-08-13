@@ -1,6 +1,6 @@
 # Map e Reduce
 
-Disciplina de Programação com Map e Reduce, ministrada pelo prof. Robério no curso de Pós em Ciência de Dados, na UNI7.
+Disciplina de Programação com Map e Reduce, ministrada pelo prof. Robério no curso de Pós em Ciência de Dados, na UNI7. Primeira [atividade](dataset\uni7-pod-map-reduce-exercise-01.pdf) da disciplina
 
 Requerimentos
 * `Python 3.6`
@@ -25,7 +25,7 @@ Para rodar um sript, você deve executar o seguite comando:
 user@computer:~$ python <script>.py dataset/<file>.txt >> output/<out>.txt
 ```
 
-Por exemplo, vamos executar o script que resolver o exercício 2:       
+Por exemplo, vamos executar o script que resolve o exercício 2:       
 
 ```console
 user@computer:~$ python MRPopularHero.py dataset/Marvel-graph.txt >> output/hero.txt

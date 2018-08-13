@@ -17,7 +17,7 @@ class MRPopularHero(MRJob):
         yield None, (amt_friends, hero)
 
     def reducerSort(self, _, hero):
-        
+
         # converting hero to a list
         hero = [hero_ for hero_ in hero]
         hero = sorted(hero, reverse = True)
@@ -32,4 +32,4 @@ class MRPopularHero(MRJob):
                 MRStep(mapper = self.mapperAgg, reducer = self.reducerSort)]
 
 if __name__ == "__main__":
-    MRPopularHero.run() 
+    MRPopularHero.run()

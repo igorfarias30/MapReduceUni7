@@ -4,22 +4,19 @@ import numpy as np
 
 class MRTenMoviePopulars(MRJob):
 
-    def mapper(self, _, line):
+    def mapperLine(self, _, line):
         ( _, movie, rating, _ ) = line.split()
         yield int(movie), (float(rating), 1)
 
-    def my_reducer(self, movie, rating):
+    def reducerLine(self, movie, rating):
 
         # get the mean rating
         ratins, popula = [], []
-        
         rating = list(rating)
+
         for i in range(len(rating)):
             ratins.append(rating[i][0])
             popula.append(rating[i][1])
-
-        #mean = round(np.array(list(rating[0])).mean(), 2)
-        #soma = sum(rating[1])
 
         mean = round(np.array(ratins).mean(), 2)
         soma = sum(popula)
@@ -40,7 +37,7 @@ class MRTenMoviePopulars(MRJob):
 
     # defining reducer to sort by mean rating
     def steps(self):
-        return [MRStep(mapper = self.mapper, reducer = self.my_reducer),
+        return [MRStep(mapper = self.mapperLine, reducer = self.reducerLine),
                 MRStep(mapper = self.mapper_2, reducer = self.reducer_2)]
 
 if __name__ == "__main__":
